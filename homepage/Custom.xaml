@@ -1,0 +1,72 @@
+﻿<local:MyCard Title="了解服务器" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+                    Text="服务器由MC-Sep创建，由MC-Sep等人维护，日均在线2人。" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                    Text="服务器详细信息" EventType="弹出窗口" EventData="服务器详细信息|服务器地址：ld.frp.one:20653 \n服务器类型：生电%Mods" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Red"
+                        Text="服务器官网" EventType="打开网页" EventData="https://mc.mc-sep.top/" ToolTip="服务器官网" />
+            <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                    Text="作者的话" EventType="弹出窗口" EventData="作者的话|我（MC-Sep）自己一个人开服务器，很累的！主要的维护工作还是在我这里。希望大家可以多多支持！服务器没有加反外G的Mod，所以请各位玩家自觉！可以去官方网站支持一下下awa" />
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="快捷命令" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyListItem Margin="-5,0,-5,8"
+            Logo="pack://application:,,,/images/Blocks/CommandBlock.png"
+            Title="启动游戏" Info="使用客户端启动Minecraft并进入服务器" EventType="启动游戏" EventData="客户端|ld.frp.one:20653" Type="Clickable" />
+        <local:MyListItem Margin="-5,0,-5,8"
+            Logo="pack://application:,,,/images/Blocks/Grass.png"
+            Title="内存优化" Info="内存优化可以优化大概1/3的物理内存，但是机械硬盘可能会造成严重卡顿，可在启动游戏前进行" EventType="内存优化" Type="Clickable" />
+        <local:MyListItem Margin="-5,0,-5,8"
+            Logo="pack://application:,,,/images/Blocks/GoldBlock.png"
+            Title="使用LatestLaunch.bat启动（高级）" Info="PCL 会将上一次启动 MC 的脚本保存在 PCL 文件夹内，且名为 LatestLaunch.bat" EventType="打开文件" EventData="explorer.exe|/select,LatestLaunch.bat" Type="Clickable" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="快速链接" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                    Text="这里提供与服务器有关的快速链接" />
+        <!-- 这是第一行 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+                        Text="打开反馈界面" EventType="打开网页" EventData="https://mc.mc-sep.top/" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                        Text="打开cmd" EventType="打开文件" EventData="cmd" />
+        </StackPanel>
+        <!-- 这是第二行 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Red"
+                        Text="复制召唤命令" EventType="复制文本" EventData="/execute as @a at @s run summon Creeper ~ ~2 ~" ToolTip="这条 Minecraft 命令会在每个玩家头顶召唤一只苦力怕！" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                        Text="内存优化" EventType="内存优化" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                        Text="下载Java23" EventType="下载文件" EventData="https://download.oracle.com/java/23/latest/jdk-23_windows-x64_bin.exe" />
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="提示" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyHint Text="不建议直接修改本客户端，除非你可以保证不出错！" />
+        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                    Text="本客户端定期更新（联网/本地），有问题请前往QQ群咨询腐竹！" />
+        <TextBlock TextWrapping="Wrap" Margin="0,6,0,0"
+                    Text="当前客户端版本：v1.2" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="关于" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,6,0,0"
+                    Text="当前客户端版本：v1.2" />
+        <TextBlock TextWrapping="Wrap" Margin="0,6,0,0"
+                    Text="当前右侧主页版本：v1.1（已为最新）" />
+        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                    Text="Powered by MC-Sep , ServerDream (2024~2025)" />
+    </StackPanel>
+</local:MyCard>
